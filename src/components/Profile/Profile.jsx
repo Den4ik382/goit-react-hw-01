@@ -1,34 +1,32 @@
+import css from "./Profile.module.css";
 export default function Profile({
-  username,
+  name,
   tag,
   location,
   image,
   stats: { followers, views, likes },
 }) {
   return (
-    <div>
-      <div>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-        />
-        <p>{username}</p>
+    <div className={css.block}>
+      <div className={css.profileCard}>
+        <img className={css.profileImg} src={image} alt="User avatar" />
+        <p className={css.username}>{name}</p>
         <p>@{tag}</p>
         <p>{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={css.list}>
+        <li className={css.item}>
+          <span className={css.spanName}>Followers</span>
+          <span className={css.spanName}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={css.item}>
+          <span className={css.spanName}>Views</span>
+          <span className={css.spanName}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={css.item}>
+          <span className={css.spanName}>Likes</span>
+          <span className={css.spanName}>{likes}</span>
         </li>
       </ul>
     </div>

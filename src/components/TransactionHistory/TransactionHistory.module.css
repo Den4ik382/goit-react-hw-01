@@ -1,0 +1,17 @@
+.table {
+  width: 400px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.head {
+  background-color: black;
+}
+.list {
+  color: white;
+}
+.first {
+  background-color: rgb(232, 231, 231);
+}
+.second {
+  background-color: rgb(108, 108, 108);
+}
